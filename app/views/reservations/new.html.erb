@@ -1,2 +1,24 @@
-<h1>Reservations#new</h1>
-<p>Find me in app/views/reservations/new.html.erb</p>
+<h1>新規予約</h1>
+
+<%= form_with model: @reservation, local: true do |f| %>
+  <div>  
+    <%= f.label :date, "日付" %><br>
+    <%= f.date_field :date %>
+  </div>
+
+  <div>
+    <%= f.label :start_time, "開始" %><br>
+    <%= f.time_field :start_time %>
+  </div>
+
+  <div>
+    <%= f.label :end_time, "終了" %><br>
+    <%= f.time_field :end_time %>
+  </div>
+
+  <div>
+    <%= f.submit "登録" %>
+  </div>
+<% end %>
+
+<%= link_to "一覧へ戻る", reservations_path %>

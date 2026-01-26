@@ -1,11 +1,26 @@
 class ReservationsController < ApplicationController
   def index
-    @reservations = Reservation.all
+    @reservations = Reservation.all.order(date: :asc, start_time: :asc)
   end
 
   def new
+    @reservation = Reservation.new
   end
 
   def create
+    @reservation = Reservation.new(reservation_parmas)
+
+    if @reservation.save
+      redirect_to reservation_path, notice: "予約を作成しました"
+
+    else
+      render :new, status: :unprocessable_entity
+  end
+end
+
+private
+
+def reservation_paramas
+  paramas.require(:reservation).permit(:date, :start_time, :end_time)
   end
 end
