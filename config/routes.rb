@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get "reservations/index"
-  get "reservations/new"
-  get "reservations/create"
+  resources :reservations, only: [:index, :new, :create]
   
   get "up" => "rails/health#show", as: :rails_health_check
 
@@ -9,5 +7,4 @@ Rails.application.routes.draw do
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
-  resources :reservations, only: [:index, :new, :create]
 end
