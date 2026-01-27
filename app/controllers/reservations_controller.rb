@@ -8,10 +8,10 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.new(reservation_parmas)
+    @reservation = Reservation.new(reservation_paramas)
 
     if @reservation.save
-      redirect_to reservation_path, notice: "予約を作成しました"
+      redirect_to reservations_path, notice: "予約を作成しました"
 
     else
       render :new, status: :unprocessable_entity
@@ -21,6 +21,6 @@ end
 private
 
 def reservation_paramas
-  paramas.require(:reservation).permit(:date, :start_time, :end_time)
+  params.require(:reservation).permit(:date, :start_time, :end_time)
   end
 end
