@@ -1,5 +1,15 @@
 <h1>新規予約</h1>
 
+<% if @reservation.errors.any? %>
+  <div class="errors">
+    <ul>
+      <% @reservation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_with model: @reservation, local: true do |f| %>
   <div>  
     <%= f.label :date, "日付" %><br>

@@ -14,7 +14,7 @@ class ReservationsController < ApplicationController
       redirect_to reservations_path, notice: "予約を作成しました"
 
     else
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity, alert: "入力内容を確認してください"
   end
 end
 
