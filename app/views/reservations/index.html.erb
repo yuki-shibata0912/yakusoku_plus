@@ -9,9 +9,9 @@
 
   <% @reservations.each do |r| %>
     <tr>
-      <td><%= r.date %></td>
-      <td><%= r.start_time %></td>
-      <td><%= r.end_time %></td>
+      <td><%= r.date&.strftime("%Y/%m/%d") %></td>
+      <td><%= r.start_time&.strftime("%H:%M") %></td>
+      <td><%= r.end_time&.strftime("%H:%M") %></td>
     </tr>
   <% end %>   
 </table>
