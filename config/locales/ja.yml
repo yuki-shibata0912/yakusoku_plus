@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    models:
+      reservation:  予約
+    attributes:
+      reservation:
+        date:  日付
+        start_time:  開始時間
+        end_time:  終了時間
+
+
+  errors:
+    messages:
+      blank:  を入力してください
