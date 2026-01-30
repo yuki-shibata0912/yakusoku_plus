@@ -1,19 +1,23 @@
 <h1>予約一覧</h1>
 
-<table>
+<table class="table">
+ <thead>
   <tr>
     <th>日付</th>
     <th>開始</th>
     <th>終了</th>
   </tr>
+ </thead> 
 
+ <tbody>
   <% @reservations.each do |r| %>
     <tr>
       <td><%= r.date&.strftime("%Y/%m/%d") %></td>
       <td><%= r.start_time&.strftime("%H:%M") %></td>
       <td><%= r.end_time&.strftime("%H:%M") %></td>
     </tr>
-  <% end %>   
+  <% end %>
+  </tbody>
 </table>
 
-<%= link_to "新規予約", new_reservation_path %>
+<%= link_to "新規予約", new_reservation_path, class: "btn btn-primary" %>
