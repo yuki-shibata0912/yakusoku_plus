@@ -8,7 +8,7 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.new(reservation_paramas)
+    @reservation = Reservation.new(reservation_params)
 
     if @reservation.save
       redirect_to reservations_path, notice: "予約を作成しました"
