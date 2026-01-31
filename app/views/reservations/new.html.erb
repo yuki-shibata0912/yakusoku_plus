@@ -1,5 +1,7 @@
 <div class="container">
 <h1>新規予約</h1>
+<%= render "form", reservation: @reservation %>
+<%= link_to "一覧へ戻る", reservations_path %>
 
 <% if @reservation.errors.any? %>
   <div class="errors">

@@ -18,9 +18,30 @@ class ReservationsController < ApplicationController
   end
 end
 
+  def edit
+    @reservation = Reservation.find(params[:id])
+  end
+
+  def update
+    @reservation = Reservation.find(params[:id])
+    if @reservation.update(reservation_params)
+      redirect_to reservations_path, notice: "予約を更新しました"
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    reservation = Reservation.find(params[:id])
+    reservation.destroy
+    redirect_to reservations_path, notice: "予約を削除しました"
+  end
+
+
+
 private
 
-def reservation_paramas
+def reservation_params
   params.require(:reservation).permit(:date, :start_time, :end_time)
   end
 end

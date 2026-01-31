@@ -10,11 +10,15 @@
  </thead> 
 
  <tbody>
-  <% @reservations.each do |r| %>
+  <% @reservations.each do |reservation| %>
     <tr>
-      <td><%= r.date&.strftime("%Y/%m/%d") %></td>
-      <td><%= r.start_time&.strftime("%H:%M") %></td>
-      <td><%= r.end_time&.strftime("%H:%M") %></td>
+      <td><%= reservation.date&.strftime("%Y/%m/%d") %></td>
+      <td><%= reservation.start_time&.strftime("%H:%M") %></td>
+      <td><%= reservation.end_time&.strftime("%H:%M") %></td>
+      <td>
+        <%= link_to "編集", edit_reservation_path(reservation) %>
+        <%= link_to "削除", reservation_path(reservation),
+            data: { turbo_method: :delete, turbo_confirm: "削除しますか？" } %>
     </tr>
   <% end %>
   </tbody>
