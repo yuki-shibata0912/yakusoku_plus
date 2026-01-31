@@ -25,7 +25,7 @@ class Reservation < ApplicationRecord
        .where("start_time < ? AND end_time > ?", end_time , start_time)
 
      if overlap.exists?
-       errors.add(:base, "この時間帯はすでに予約されています") 
+       errors.add(:base, "この時間帯はすでに予約があります") 
     end
   end
 end
