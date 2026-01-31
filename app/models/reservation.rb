@@ -2,6 +2,7 @@ class Reservation < ApplicationRecord
    validates :date, presence: true
    validates :start_time, presence: true
    validates :end_time, presence: true
+   validates :salon_name, presence: true
    validate :end_time_after_start_time
    validate :no_time_overlap
    

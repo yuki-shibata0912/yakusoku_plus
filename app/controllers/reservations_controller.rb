@@ -42,6 +42,6 @@ end
 private
 
 def reservation_params
-  params.require(:reservation).permit(:date, :start_time, :end_time)
+  params.require(:reservation).permit(:date, :start_time, :end_time, :salon_name,)
   end
 end

@@ -24,5 +24,12 @@
     <%= f.time_field :end_time, class: "form-control" %>
   </div>
 
+  <div class="mb-3">
+    <%= f.label :salon_name, "サロン・クリニック名", class: "form-label" %>
+    <%= f.text_field :salon_name,
+       class: "form-control",
+       placeholder: "例：〇〇歯科 / △△サロン" %>
+  </div>
+
   <%= f.submit "登録", class: "btn btn-primary" %>
 <% end %>

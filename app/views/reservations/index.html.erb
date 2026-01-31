@@ -6,6 +6,7 @@
     <th>日付</th>
     <th>開始</th>
     <th>終了</th>
+    <th>サロン・クリニック名</th>
   </tr>
  </thead> 
 
@@ -15,6 +16,7 @@
       <td><%= reservation.date&.strftime("%Y/%m/%d") %></td>
       <td><%= reservation.start_time&.strftime("%H:%M") %></td>
       <td><%= reservation.end_time&.strftime("%H:%M") %></td>
+      <td><%= reservation.salon_name %></td>
       <td>
         <%= link_to "編集", edit_reservation_path(reservation) %>
         <%= link_to "削除", reservation_path(reservation),
