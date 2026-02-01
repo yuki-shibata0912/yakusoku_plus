@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2026-01-26
+  start_time: 2026-01-26 02:10:43
+  end_time: 2026-01-26 02:10:43
+
+two:
+  date: 2026-01-26
+  start_time: 2026-01-26 02:10:43
+  end_time: 2026-01-26 02:10:43

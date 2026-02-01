@@ -1,0 +1,33 @@
+<h1 class="page-title">予約一覧</h1>
+
+<table class="table">
+ <thead>
+  <tr>
+    <th>日付</th>
+    <th>開始</th>
+    <th>終了</th>
+    <th>サロン・クリニック名</th>
+    <th>操作</th>
+  </tr>
+ </thead> 
+
+ <tbody>
+  <% @reservations.each do |reservation| %>
+    <tr>
+      <td><%= reservation.date&.strftime("%Y/%m/%d") %></td>
+      <td><%= reservation.start_time&.strftime("%H:%M") %></td>
+      <td><%= reservation.end_time&.strftime("%H:%M") %></td>
+      <td><%= reservation.salon_name %></td>
+      <td>
+        <%= link_to "編集", edit_reservation_path(reservation),
+            class: "btn btn-secondary"%>
+        <%= link_to "削除", reservation_path(reservation),
+            data: { turbo_method: :delete, turbo_confirm: "削除しますか？" },
+            class: "btn btn-delete" %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to "新規予約", new_reservation_path, class: "btn new-reservation" %>
