@@ -4,3 +4,9 @@ ja:
       already_authenticated: "すでにログインしています。"
       user:
         already_authenticated: "すでにログインしています。"
+
+
+    links:
+      sign_in:  "ログイン"
+      sign_up:  "アカウント登録"
+      forgot_password:  "パスワードをお忘れですか？"
