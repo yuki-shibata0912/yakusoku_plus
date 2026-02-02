@@ -1,0 +1,6 @@
+<%= @reservation.salon_name %> の予約があります。
+
+日付：<%= @reservation.date %>
+時間：<%= @reservation.start_time.strftime("%H:%M") %> 〜 <%= @reservation.end_time.strftime("%H:%M") %>
+
+忘れずにご来店ください。
