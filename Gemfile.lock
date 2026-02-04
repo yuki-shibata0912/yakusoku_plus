@@ -145,6 +145,7 @@ GEM
       date
       net-protocol
     net-pop (0.1.2)
+      net-protocol
     net-protocol (0.2.2)
       timeout
     net-smtp (0.5.1)
@@ -346,4 +347,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   2.5.11
+  4.0.5
