@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root "home#index"
 
   # 予約（現在動いている最低限）
-  resources :reservations, only: [:index, :new, :create, :edit, :update, :destroy]
+  resources :reservations, only: [ :index, :new, :create, :edit, :update, :destroy ]
 
   # Rails標準
   get "up" => "rails/health#show", as: :rails_health_check
