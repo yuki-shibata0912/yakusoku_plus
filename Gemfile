@@ -55,4 +55,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+
+   # CIのため minitest を 5系に固定
+  gem "minitest", "< 6"
 end
