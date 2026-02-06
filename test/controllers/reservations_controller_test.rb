@@ -7,12 +7,11 @@ class ReservationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_reservations_url
+    get new_reservation_url
     assert_response :success
   end
 
-  # test "should get create" do
-    # post reservations_url
-    # assert_response :success
-  #end
+  test "should create reservation" do
+    skip "createのテストは後で追加"
+  end
 end
