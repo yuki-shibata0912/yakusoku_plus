@@ -17,7 +17,7 @@ class ReservationsController < ApplicationController
 
     else
       render :new, status: :unprocessable_entity, alert: "入力内容を確認してください"
-  end
+    end
 end
 
   def edit
