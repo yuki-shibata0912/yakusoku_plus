@@ -18,6 +18,16 @@
   </head>
 
   <body>
+  <header style="margin-bottom: 20px;">
+  <% if user_signed_in? %>
+    ログイン中　　
+    <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
+  <% else %>
+    <%= link_to "ログイン", new_user_session_path %> |
+    <%= link_to "新規登録", new_user_registration_path %>
+  <% end %>
+  </header>
+  
    <div class="container">
     <% flash.each do |key,value| %>
       <div class="flash <%= key %>"><%= value %></div>
