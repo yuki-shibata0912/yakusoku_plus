@@ -1,14 +1,16 @@
 class ReservationsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-    @reservations = Reservation.all.order(date: :asc, start_time: :asc)
+    @reservations = current_user.reservations.order(date: :asc, start_time: :asc)
   end
 
   def new
-    @reservation = Reservation.new
+    @reservation = current_user.reservations.new
   end
 
   def create
-    @reservation = Reservation.new(reservation_params)
+    @reservation = current_user.reservations.new(reservation_params)
 
     if @reservation.save
       redirect_to reservations_path, notice: "予約を作成しました"
@@ -19,7 +21,7 @@ class ReservationsController < ApplicationController
 end
 
   def edit
-    @reservation = Reservation.find(params[:id])
+    @reservation = current_user.reservations.find(params[:id])
   end
 
   def update
@@ -32,7 +34,7 @@ end
   end
 
   def destroy
-    reservation = Reservation.find(params[:id])
+    reservation = current_user.reservations.find(params[:id])
     reservation.destroy
     redirect_to reservations_path, notice: "予約を削除しました"
   end

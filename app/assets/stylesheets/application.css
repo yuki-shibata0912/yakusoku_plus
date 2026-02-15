@@ -162,3 +162,54 @@ table.table td:nth-child(4) {
     gap: 10px;
     margin-top: 18px;
 }
+
+/* ログイン関連 */
+.auth-container {
+    max-width: 400px;
+    margin: 40px auto;
+}
+
+.auth-container input[type="email"],
+.auth-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.auth-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.auth-container .form-group {
+    margin-bottom: 16px;
+}
+
+.auth-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.error_explanation {
+    border: 1px solid #e11d48;
+    background: #fff1f2;
+    padding: 12px 16px;
+    margin: 12px 0 16px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.error_explanation ul {
+    margin: 8px 0 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.error_explanation li {
+    color: #e11d48;
+    margin: 4px 0;
+}

@@ -1,4 +1,5 @@
 class Reservation < ApplicationRecord
+   belongs_to :user
    validates :date, presence: true
    validates :start_time, presence: true
    validates :end_time, presence: true
@@ -20,7 +21,7 @@ class Reservation < ApplicationRecord
 
 
      overlap = Reservation
-       .where(date: date)
+       .where(user_id: user_id, date: date)
        .where.not(id: id)
        .where("start_time < ? AND end_time > ?", end_time, start_time)
 
