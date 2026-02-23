@@ -49,4 +49,5 @@ Yakusoku+ は、サロン・クリニックなどの予約管理を想定した 
 開発環境では実際のメール送信は行わず、Railsのログ上で送信内容を確認できるようにしています。
 
 ## ER図
-   
+<img width="561" height="271" alt="Yakusoku+_ER図" src="https://github.com/user-attachments/assets/f2e9dcf3-0a50-45ca-abbb-3cb68348e078" />
+
