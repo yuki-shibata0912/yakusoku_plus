@@ -1,4 +1,7 @@
-<h1 class="page-title">予約一覧</h1>
+<div class="header">
+ <h1 class="page-title">予約一覧</h1>
+ <%= link_to "新規予約", new_reservation_path, class: "btn new-reservation" %>
+</div>
 
 <table class="table">
  <thead>
@@ -29,5 +32,3 @@
   <% end %>
   </tbody>
 </table>
-
-<%= link_to "新規予約", new_reservation_path, class: "btn new-reservation" %>
