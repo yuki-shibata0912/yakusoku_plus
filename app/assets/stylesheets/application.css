@@ -47,8 +47,11 @@
 /* 予約一覧 */
 .container {
     max-width: 900px;
-    margin: 24px auto;
-    padding: 0 16px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
 }
 
 table {
