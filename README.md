@@ -51,10 +51,6 @@ https://yakusoku-plus-513351d87129.herokuapp.com/
 - 予約前日にリマインドメールを送信する機能を実装し、予約忘れを防止
 - GitHub Actionsを用いて自動テスト・Lintを実行し、コード品質を維持
 
-## リマインドメール機能について
-予約前日にリマインドメールを送信することで、ユーザーの予約忘れを防ぐ仕組みを実装しています。
-開発環境では実際のメール送信は行わず、Railsのログ上で送信内容を確認できるようにしています。
-本番環境では cron 等の定期実行機構を利用する予定です。
 
 ## ER図
 <img width="561" height="271" alt="Yakusoku+_ER図" src="https://github.com/user-attachments/assets/f2e9dcf3-0a50-45ca-abbb-3cb68348e078" />
