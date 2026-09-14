@@ -10,6 +10,7 @@ Yakusoku+ は、サロン・クリニックなどの予約管理を想定した 
 
 1. トップページ
 <img height="1200" alt="トップページ" src="https://github.com/user-attachments/assets/dc68b732-8439-4fde-a98f-4685e92f1976" />
+<img height="1200" alt="トップページ" src="https://github.com/user-attachments/assets/a6a7298d-2914-4080-8516-ee5523d701e5" />
 
 2. ログイン画面
 <img height="1200" alt="ログイン画面" src="https://github.com/user-attachments/assets/57eba906-9844-428c-bd1a-677acc9ac991" />
@@ -42,14 +43,13 @@ https://yakusoku-plus-513351d87129.herokuapp.com/
 - パスワード：TestPass123
 
 ## なぜこのアプリを作ったか
-予約のダブルブッキングや予約忘れといった、実際の業務で起こりやすい課題を解決するために作成しました。
+予約のダブルブッキングや予約忘れといった、実生活で起こりやすい課題を解決するために作成しました。
 単に予約を管理するだけでなく、実運用を想定し、「ミスを防ぐ仕組み」を重視しています。
 
 ## 工夫したところ
 - 予約時間の重複を防ぐため、バリデーションを実装しダブルブッキングを防止
 - ユーザー認証（Devise）を導入し、ログイン状態に応じたアクセス制御を実装
-- 予約前日にリマインドメールを送信する機能を実装し、予約忘れを防止
-- GitHub Actionsを用いて自動テスト・Lintを実行し、コード品質を維持
+- GitHub Actionsを用いて自動テスト・Lintを実行し、コード品質を確認
 
 
 ## ER図
